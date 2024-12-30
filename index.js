@@ -1,10 +1,12 @@
 import express from 'express'
-
+import 'dotenv/config'
+import { config } from 'dotenv';
 let app = express();
-let port = 3000
+let port = process.env.port || 3001
 app.use(express.json());
 let Teas = [];
 let newId = Teas.length+1;
+
 
 
 app.get('/',(req, res) => {

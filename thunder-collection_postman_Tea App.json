@@ -1,0 +1,126 @@
+{
+    "info": {
+        "_postman_id": "735564ff-55c2-4f78-977f-09f7b878e113",
+        "name": "Tea App",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "add a tea",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "127.0.0.1:3002/teas",
+                    "path": [
+                        "teas"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "3002"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"name\": \"my Most Fav Tea\",\n  \"price\": \"25$\"\n}"
+                }
+            }
+        },
+        {
+            "name": "List all Teas",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "127.0.0.1:3000/teas",
+                    "path": [
+                        "teas"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "tea with a id",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "127.0.0.1:3000/teas/3",
+                    "path": [
+                        "teas",
+                        "3"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "Update tea",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "127.0.0.1:3000/teas/3",
+                    "path": [
+                        "teas",
+                        "3"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"name\": \"ginger tea\",\n  \"price\": \"5$\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Delete a tea",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "127.0.0.1:3000/teas/2",
+                    "path": [
+                        "teas",
+                        "2"
+                    ],
+                    "host": [
+                        "127",
+                        "0",
+                        "0",
+                        "1"
+                    ],
+                    "port": "3000"
+                }
+            }
+        }
+    ]
+}
